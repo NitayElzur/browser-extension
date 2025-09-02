@@ -1,5 +1,5 @@
 import type { Selection } from "../Main/Main";
-import RadioButton from "../RadioButton/RadioButton";
+// import RadioButton from "../RadioButton/RadioButton";
 import "./FilterHeader.css";
 const FilterHeader = ({
   selectedOption,
@@ -8,38 +8,25 @@ const FilterHeader = ({
   selectedOption: Selection;
   setSelectedOption: React.Dispatch<React.SetStateAction<Selection>>;
 }) => {
-  function handleClick(value: Selection) {
-    setSelectedOption(value);
-  }
+  // function handleClick(value: Selection) {
+  //   setSelectedOption(value);
+  // }
   return (
     <div className="filter-header noto-sans-700">
       <p>Extensions List</p>
       <div className="filter-options noto-sans-400">
-        {["all", "active", "inactive"].map((value) => {
-          if (value === selectedOption)
-            return (
-              <RadioButton
-                key={value}
-                name="filter"
-                id={value}
-                defaultChecked
-                onChange={() => handleClick(value)}
-              />
-            );
-          else if (
-            value === "all" ||
-            value === "active" ||
-            value === "inactive"
-          )
-            return (
-              <RadioButton
-                key={value}
-                name="filter"
-                id={value}
-                onChange={() => handleClick(value)}
-              />
-            );
-        })}
+        {(["all", "active", "inactive"] as const).map((value) => (
+          <label key={value} className="radio-label">
+            <input
+              type="radio"
+              name="filter"
+              value={value}
+              checked={selectedOption === value}
+              onChange={() => setSelectedOption(value)}
+            />
+            <span className="radio-text">{value}</span>
+          </label>
+        ))}
       </div>
     </div>
   );

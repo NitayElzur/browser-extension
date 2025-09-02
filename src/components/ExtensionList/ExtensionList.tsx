@@ -8,11 +8,8 @@ import type { Selection } from "../Main/Main";
 const ExtensionList = ({ selectedOption }: { selectedOption: Selection }) => {
   const [data, setData] = useState<({ id: string } & cardData)[]>();
   useEffect(() => {
-    // id: crypto.randomUUID(),
-    setData(
-      jsonData.map((value, index) => ({ ...value, id: index.toString() }))
-    );
-  }, [jsonData]);
+    setData(jsonData.map((value) => ({ ...value, id: crypto.randomUUID() })));
+  }, []);
 
   function handleRemoveCard(id: string) {
     setData((prev) => prev?.filter((card) => card.id !== id));

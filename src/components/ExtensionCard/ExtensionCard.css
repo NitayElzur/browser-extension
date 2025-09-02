@@ -7,22 +7,23 @@
     background-color: var(--Background-Color);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     border-radius: 16px;
+}
 
-    >.upper {
-        display: flex;
-        gap: 8px;
+.extension-card>.upper {
+    display: flex;
+    gap: 8px;
 
-        >.content {
-            display: flex;
-            flex-direction: column;
-        }
-    }
+}
 
-    >.lower {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
+.extension-card>.upper>.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.extension-card>.lower {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .card-title {

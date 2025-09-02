@@ -6,9 +6,10 @@
     transition: background-color 200ms;
 
 
-    >input {
-        display: none;
-    }
+}
+
+.radio-label > input {
+    display: none;
 }
 
 .radio-label:has(input[type="radio"]:checked) {

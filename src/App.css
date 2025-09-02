@@ -12,7 +12,7 @@ body,
     min-height: 100vh;
 }
 
-#root {
+:root {
     --Neutral-900: hsl(227, 75%, 14%);
     --Neutral-800: hsl(226, 25%, 17%);
     --Neutral-700: hsl(225, 23%, 24%);
