@@ -1,0 +1,22 @@
+.radio-label {
+    text-transform: capitalize;
+    border-radius: 50px;
+    cursor: pointer;
+    padding: 6px 10px;
+    transition: background-color 200ms;
+
+
+    >input {
+        display: none;
+    }
+}
+
+.radio-label:has(input[type="radio"]:checked) {
+    background-color: var(--Red-400);
+    color: var(--Neutral-100);
+}
+
+.radio-label:hover {
+    border: 2px solid var(--Red-400);
+    padding: 4px 8px;
+}

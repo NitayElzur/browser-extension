@@ -1,0 +1,35 @@
+.extension-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    padding: 16px;
+    gap: 16px;
+    background-color: var(--Background-Color);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 16px;
+
+    >.upper {
+        display: flex;
+        gap: 8px;
+
+        >.content {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    >.lower {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+.card-title {
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.card-description {
+    font-size: 0.8rem;
+}

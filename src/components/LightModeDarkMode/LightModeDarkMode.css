@@ -1,0 +1,14 @@
+.header-logo {
+    cursor: pointer;
+    background-color: var(--Light-Dark-Color);
+    border-radius: 8px;
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+    align-self: center;
+}
+
+.header-logo:hover {
+    border: 2px solid var(--Red-400);
+
+}

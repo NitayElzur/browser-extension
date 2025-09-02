@@ -1,0 +1,12 @@
+.filter-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.filter-options {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}

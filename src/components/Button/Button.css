@@ -1,0 +1,19 @@
+.button {
+    background-color: inherit;
+    border-radius: 50px;
+    border: 1.5px solid var(--Neutral-300);
+    padding: 6px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: background-color 200ms;
+    color: inherit;
+}
+
+.button:hover {
+    background-color: var(--Red-400);
+    color: var(--Neutral-100);
+}
+
+.button:focus-visible {
+    outline: var(--Red-400) auto 1px;
+}
